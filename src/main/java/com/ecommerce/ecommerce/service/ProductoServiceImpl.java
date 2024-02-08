@@ -15,21 +15,25 @@ public class ProductoServiceImpl implements ProductoService{
     @Autowired
     private ProductoRepository productoRepository;
 
+    @SuppressWarnings("null")
     @Override
     public Producto save(Producto producto) {
         return productoRepository.save(producto);
     }
 
+    @SuppressWarnings("null")
     @Override
     public Optional<Producto> get(Integer id) {
         return productoRepository.findById(id);
     }
 
+    @SuppressWarnings("null")
     @Override
     public void update(Producto producto) {
         productoRepository.save(producto);
     }
 
+    @SuppressWarnings("null")
     @Override
     public void delete(Integer id) {
         productoRepository.deleteById(id);
